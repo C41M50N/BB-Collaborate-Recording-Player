@@ -29,6 +29,8 @@ namespace BB_Collaborate_Recording_Player_UWP
         {
             this.InitializeComponent();
             URL_Field.GotFocus += URL_Field_GotFocus;
+            playbackRateSlider.ValueChanged += playbackRateSlider_ValueChanged;
+            playbackRateSlider.Value = 1.5;
         }
 
         private async void onGoClick(object sender, TappedRoutedEventArgs e)
@@ -59,6 +61,13 @@ namespace BB_Collaborate_Recording_Player_UWP
             var textBox = (TextBox)sender;
             textBox.SelectAll();
             textBox.Focus(FocusState.Keyboard);
+        }
+
+        private void playbackRateSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            double newSpeed = playbackRateSlider.Value;
+            Video_Player.PlaybackRate = newSpeed;
+            playbackTextBlock.Text = String.Format("Playback Speed: {0}x", newSpeed.ToString("0.0"));
         }
     }
     // TODO: Comment the Code

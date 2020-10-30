@@ -7,10 +7,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    
     <Grid>
-        <TextBox x:Name="URL_Field" HorizontalAlignment="Left" Margin="378,35,0,0" Text="Collaborate Src URL" VerticalAlignment="Top" Width="674" Tapped="URLFieldOnClick" GotFocus="URL_Field_GotFocus"/>
-        <Button x:Name="Go_Button" Content="Go" Margin="1084,35,0,0" VerticalAlignment="Top" Width="129" Height="30" FontWeight="Bold" Tapped="onGoClick"/>
-        <MediaElement x:Name="Video_Player" Height="800" Margin="0,-42,0,0" Width="1416" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="URL_Field" HorizontalAlignment="Center" Margin="-150,32,0,943" Text="" Width="650" Tapped="URLFieldOnClick" GotFocus="URL_Field_GotFocus" PlaceholderText="Collaborate Src URL"/>
+        <Button x:Name="Go_Button" Content="Go" Margin="0,-910,520,0" Width="129" Height="30" FontWeight="Bold" Tapped="onGoClick" HorizontalAlignment="Right"/>
+        <MediaElement x:Name="Video_Player" Height="800" Margin="0,-42,0,0" Width="1416" HorizontalAlignment="Center" VerticalAlignment="Center" RequestedTheme="Dark" AreTransportControlsEnabled="True">
+            <MediaElement.TransportControls>
+                <MediaTransportControls></MediaTransportControls>
+            </MediaElement.TransportControls>
+        </MediaElement>
+        <TextBlock x:Name="playbackTextBlock" Text="Playback Speed: 1.5x" Margin="270,910,893,0" Width="230" FontSize="24" TextWrapping="NoWrap"/>
+        <Slider x:Name="playbackRateSlider" Minimum="0.1" Maximum="3.0" TickFrequency="0.1" TickPlacement="Inline" ValueChanged="playbackRateSlider_ValueChanged" Orientation="Horizontal" Margin="520,913,181,0" Width="700" SnapsTo="Ticks"/>
     </Grid>
 </Page>
