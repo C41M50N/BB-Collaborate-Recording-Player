@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="158b483b-22cb-4d83-b294-d546170fa9e7"
-    Publisher="CN=charl"
-    Version="1.0.0.0" />
+    Name="55822TheCrimsoncoder.BBCollaborateRecordingPlayer"
+    Publisher="CN=EE3A675E-FCFA-4FDB-B108-C5CF05C4500E"
+    Version="1.0.2.0" />
 
-  <mp:PhoneIdentity PhoneProductId="158b483b-22cb-4d83-b294-d546170fa9e7" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="1ab0f79d-1a57-48d7-a372-84e50fadec14" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>BB-Collaborate-Recording-Player-UWP</DisplayName>
-    <PublisherDisplayName>charl</PublisherDisplayName>
+    <DisplayName>BB Collaborate Recording Player</DisplayName>
+    <PublisherDisplayName>The Crimsoncoder</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -32,12 +32,12 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="BB_Collaborate_Recording_Player_UWP.App">
       <uap:VisualElements
-        DisplayName="BB-Collaborate-Recording-Player-UWP"
+        DisplayName="BB Collaborate Recording Player"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="BB-Collaborate-Recording-Player-UWP"
+        Description="A lightweight video player for Blackboard Collaborate recordings. Icon from: https://www.flaticon.com/free-icon/scholarship_201614"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
